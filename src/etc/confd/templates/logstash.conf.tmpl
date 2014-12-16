@@ -12,6 +12,15 @@ input {
   }
 }
 
+input {
+   udp {
+      port => 57012
+      type => "udp_json_e"
+      buffer_size => 8192
+      format => "json_event"
+   }
+}
+
 filter {
   if [type] == "docker" {
     json {
