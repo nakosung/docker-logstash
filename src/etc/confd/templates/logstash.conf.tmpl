@@ -10,15 +10,12 @@ input {
   tcp {
     port => 3333
   }
-}
-
-input {
-   udp {
-      port => 57012
-      type => "udp_json_e"
-      buffer_size => 8192
-      format => "json_event"
-   }
+  udp {
+    port => 57012
+    type => "udp_json_e"
+    buffer_size => 8192
+    format => "json_event"
+  }
 }
 
 filter {
